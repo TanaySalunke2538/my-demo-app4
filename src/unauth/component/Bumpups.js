@@ -10,7 +10,6 @@ const Bumpups = () => {
 
   return (
     <section className="bumpups">
-      <h2>Why Choose Us</h2>
       <div className="bumpups-container">
         {bumps.map((bump) => (
           <div key={bump.id} className="bump-card">

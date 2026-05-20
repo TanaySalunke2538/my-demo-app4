@@ -10,7 +10,6 @@ const Timestamps = () => {
 
   return (
     <section className="timestamps">
-      <h2>Timeline</h2>
       <div className="timeline">
         {events.map((event) => (
           <div key={event.id} className="timeline-item">

@@ -1,40 +1,136 @@
 .navbar {
-  background-color: #333;
-  padding: 1rem 0;
+  background-color: #ffffff;
+  padding: 1.2rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .navbar-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 3rem;
+  gap: 2rem;
 }
 
 .navbar-brand {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
 }
 
 .navbar-menu {
   list-style: none;
   display: flex;
-  gap: 2rem;
-  margin: 0;
+  gap: 3rem;
+  margin: 0 0 0 auto;
   padding: 0;
 }
 
+.navbar-menu li {
+  position: relative;
+}
+
 .navbar-menu a {
-  color: white;
+  color: #1a1a1a;
   text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
   transition: color 0.3s ease;
+  display: block;
+  padding: 0.5rem 0;
 }
 
 .navbar-menu a:hover {
   color: #667eea;
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #667eea;
+  transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+}
+
+.navbar-button {
+  background-color: transparent;
+  color: #1a1a1a;
+  border: 2px solid #1a1a1a;
+  padding: 0.7rem 1.8rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  margin-left: 2rem;
+}
+
+.navbar-button:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 1.5rem;
+  }
+
+  .navbar-menu {
+    gap: 1.5rem;
+  }
+
+  .navbar-menu a {
+    font-size: 0.9rem;
+  }
+
+  .navbar-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .navbar-logo {
+    height: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-menu {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .navbar-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .navbar-container {
+    padding: 0 1rem;
+  }
 }

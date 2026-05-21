@@ -48,7 +48,7 @@
 
 .footer-social {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -56,26 +56,42 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: #2a2a2a;
-  border-radius: 50%;
+  
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  
   color: #ffffff;
-  transition: all 0.3s ease;
   text-decoration: none;
-  font-size: 1.1rem;
+  
+  font-size: 1.5rem;
+  
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+.social-link svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  background-color: #00d99f;
-  color: #1a1a1a;
-  transform: translateY(-3px);
+  background-color: transparent;
+  border-color: transparent;
+  
+  color: #00d99f;
+  
+  transform: translateY(-4px) scale(1.1);
+  
+  box-shadow: none;
 }
 
-/* Fallback for no font-awesome */
-.social-link::before {
-  content: '';
-  display: inline-block;
+.social-link:hover svg {
+  filter: drop-shadow(0 2px 8px rgba(0, 217, 159, 0.4));
 }
 
 /* ===========================
@@ -237,13 +253,12 @@
   }
 
   .footer-social {
-    gap: 0.75rem;
+    gap: 1rem;
   }
 
-  .social-link {
-    width: 35px;
-    height: 35px;
-    font-size: 0.9rem;
+  .social-link svg {
+    width: 20px;
+    height: 20px;
   }
 
   .footer-brand p {

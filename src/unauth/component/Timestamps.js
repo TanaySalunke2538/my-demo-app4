@@ -14,7 +14,7 @@ const Timestamps = () => {
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
-      alert('Timestamps generated! (This is a demo)');
+      alert('Timestamps generated!');
     }, 1500);
   };
 

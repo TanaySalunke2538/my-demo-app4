@@ -1,5 +1,7 @@
 import React from 'react';
 import './Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn, faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -10,14 +12,14 @@ const Footer = () => {
           <h3>#1 AI VIDEO MODEL</h3>
           <p>Bump AI will watch any video and deliver insights across all industries.</p>
           <div className="footer-social">
-            <a href="#linkedin" className="social-link" aria-label="LinkedIn">
-              <i className="fab fa-linkedin-in"></i>
+            <a href="https://www.linkedin.com/in/tanay-salunke-a7b11936a/" className="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
-            <a href="#twitter" className="social-link" aria-label="Twitter">
-              <i className="fab fa-twitter"></i>
+            <a href="https://github.com/TanaySalunke2538" className="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faGithub} />
             </a>
-            <a href="#youtube" className="social-link" aria-label="YouTube">
-              <i className="fab fa-youtube"></i>
+            <a href="https://youtube.com/playlist?list=PLJrzt4ameiaPxcbEZ4wIcISCCU7MdvtfF&si=awJ5P63u-wZIu7s3" className="social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faYoutube} />
             </a>
           </div>
         </div>
@@ -67,5 +69,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

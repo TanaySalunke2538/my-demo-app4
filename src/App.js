@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './unauth/component/navbar';
+import Bumpups from './unauth/component/Bumpups';
+import Timestamps from './unauth/component/Timestamps';
+import Footer from './unauth/component/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      {/* ==================== HEADER SECTION ==================== */}
+      <header className="app-header">
+        <Navbar />
       </header>
+
+      {/* ==================== MAIN CONTENT ==================== */}
+      <main className="app-main">
+        {/* Timestamps Component Section */}
+        <section className="app-section">
+          <Timestamps />
+        </section>
+
+        {/* Bumpups Component Section */}
+        <section className="app-section">
+          <Bumpups />
+        </section>
+      </main>
+
+      {/* ==================== FOOTER SECTION ==================== */}
+      <footer className="app-footer">
+        <Footer />
+      </footer>
     </div>
   );
 }

@@ -1,0 +1,291 @@
+/* ===========================
+   FOOTER STYLES
+   =========================== */
+
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 4rem 2rem 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid #333333;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #333333;
+}
+
+/* ===========================
+   BRAND SECTION (LEFT)
+   =========================== */
+
+.footer-brand h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #00d99f;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #b3b3b3;
+  margin-bottom: 1.5rem;
+  max-width: 250px;
+}
+
+/* ===========================
+   SOCIAL LINKS
+   =========================== */
+
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  
+  color: #ffffff;
+  text-decoration: none;
+  
+  font-size: 1.5rem;
+  
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+.social-link svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: transparent;
+  border-color: transparent;
+  
+  color: #00d99f;
+  
+  transform: translateY(-4px) scale(1.1);
+  
+  box-shadow: none;
+}
+
+.social-link:hover svg {
+  filter: drop-shadow(0 2px 8px rgba(0, 217, 159, 0.4));
+}
+
+/* ===========================
+   FOOTER SECTIONS
+   =========================== */
+
+.footer-section {
+  display: block;
+}
+
+.footer-section h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.footer-section a:hover {
+  color: #00d99f;
+  padding-left: 0.5rem;
+}
+
+/* ===========================
+   FOOTER BOTTOM
+   =========================== */
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #808080;
+  padding: 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-links a {
+  color: #808080;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+  color: #00d99f;
+}
+
+.separator {
+  color: #404040;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .footer {
+    padding: 3rem 2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer {
+    padding: 2.5rem 1.5rem 2rem;
+    margin-top: 3rem;
+  }
+
+  .footer-section h4 {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-section a {
+    font-size: 0.85rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 2rem 1rem 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .footer-container {
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .footer-section h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-section li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-section a {
+    font-size: 0.8rem;
+  }
+
+  .footer-social {
+    gap: 1rem;
+  }
+
+  .social-link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer-brand p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .footer-bottom {
+    gap: 0.5rem;
+  }
+
+  .footer-bottom p,
+  .footer-links a,
+  .separator {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===========================
+   DARK THEME (ALREADY APPLIED)
+   =========================== */
+
+/* Ensures proper contrast for accessibility */
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+}

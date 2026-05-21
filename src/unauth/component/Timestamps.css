@@ -1,0 +1,367 @@
+/* ===========================
+   TIMESTAMPS SECTION
+   =========================== */
+
+.timestamps {
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 4rem 2rem;
+  border-top: none;
+  border-bottom: none;
+
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.timestamps-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   TIMESTAMPS HEADER
+   =========================== */
+
+.timestamps-header {
+  margin-bottom: 3rem;
+}
+
+.timestamps-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.timestamps-header p {
+  font-size: 0.95rem;
+  color: #b3b3b3;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0;
+}
+
+.timestamps-link {
+  color: #00d99f;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.timestamps-link:hover {
+  color: #00ff7f;
+  text-decoration: underline;
+}
+
+/* ===========================
+   INPUT SECTION
+   =========================== */
+
+.timestamps-input-wrapper {
+  margin-bottom: 2rem;
+}
+
+.timestamps-input-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #2a2a2a;
+  border: 1px solid #404040;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.timestamps-input-group:focus-within {
+  border-color: #00d99f;
+  box-shadow: 0 0 0 3px rgba(0, 217, 159, 0.1);
+}
+
+.input-icon {
+  font-size: 1.25rem;
+  color: #00d99f;
+  flex-shrink: 0;
+}
+
+.timestamps-input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.timestamps-input::placeholder {
+  color: #808080;
+}
+
+.timestamps-input::-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #2a2a2a inset;
+  -webkit-text-fill-color: #ffffff;
+}
+
+/* ===========================
+   GENERATE BUTTON
+   =========================== */
+
+.timestamps-button {
+  background-color: #0078d4;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.timestamps-button:hover:not(:disabled) {
+  background-color: #0064b1;
+  box-shadow: 0 4px 12px rgba(0, 120, 212, 0.3);
+  transform: translateY(-2px);
+}
+
+.timestamps-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.timestamps-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ===========================
+   ERROR MESSAGE
+   =========================== */
+
+.timestamps-error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background-color: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: 0.5rem;
+}
+
+/* ===========================
+   VIDEO DISPLAY SECTION
+   =========================== */
+
+.timestamps-video-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 2rem 0;
+}
+
+.video-thumbnail-wrapper {
+  width: 100%;
+  max-width: 560px;
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover {
+  transform: scale(1.02);
+}
+
+.video-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  max-width: 560px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+/* ===========================
+   DIVIDER
+   =========================== */
+
+.timestamps-divider {
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #404040 0px,
+    #404040 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  margin: 2rem 0;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 768px) {
+  .timestamps {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .timestamps-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .timestamps-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .timestamps-header p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .timestamps-input-wrapper {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .timestamps-input-group {
+    width: 100%;
+    padding: 1rem;
+    gap: 0.75rem;
+    box-sizing: border-box;
+  }
+
+  .timestamps-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.6rem;
+  }
+
+  .timestamps-button {
+    padding: 0.7rem 1.5rem;
+    white-space: nowrap;
+  }
+
+  .timestamps-video-display {
+    padding: 1.5rem 0;
+    margin-top: 1.5rem;
+  }
+
+  .video-thumbnail-wrapper {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .video-title {
+    font-size: 1.1rem;
+    padding: 0 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .timestamps {
+    padding: 1rem 1rem 1.5rem 1rem;
+  } 
+
+  .timestamps-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .timestamps-header h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .timestamps-header p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+
+  .timestamps-input-wrapper {
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .timestamps-input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #2a2a2a;
+    border: 1px solid #404040;
+    border-radius: 12px;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .input-icon {
+    align-self: flex-start;
+    font-size: 1rem;
+  }
+
+  .timestamps-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .timestamps-input::placeholder {
+    color: #888;
+  }
+
+  .timestamps-button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .timestamps-error {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .timestamps-video-display {
+    margin-top: 1rem;
+    padding: 1rem 0;
+  }
+
+  .video-thumbnail-wrapper {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .video-title {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .timestamps-divider {
+    margin: 1rem 0;
+  }
+}

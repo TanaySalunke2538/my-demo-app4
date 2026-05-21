@@ -1,0 +1,350 @@
+/* ===========================
+   BUMPUPS/SERVICES SECTION
+   =========================== */
+
+.bumpups {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: #2b2a2a;
+}
+
+.bumpups-header {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  text-align: left;
+}
+
+.bumpups-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.bumpups-header p {
+  font-size: 1rem;
+  color: #b3b3b3;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===========================
+   SERVICES CONTAINER & GRID
+   =========================== */
+
+.bumpups-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* ===========================
+   BUMP CARD STYLES
+   =========================== */
+
+.bump-card {
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #2a2a2a;
+  border: 1px solid #333333;
+}
+
+/* Add subtle background animation */
+.bump-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bump-card:hover::before {
+  opacity: 0.08;
+}
+
+.bump-card-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Card styling for dark gray backgrounds (#2a2a2a) */
+.bump-card[style*="rgb(42, 42, 42)"] {
+  background-color: #2a2a2a;
+  border: 1px solid #404040;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.bump-card[style*="rgb(42, 42, 42)"] h3 {
+  color: #ffffff;
+}
+
+.bump-card[style*="rgb(42, 42, 42)"] p {
+  color: #b3b3b3;
+}
+
+.bump-card[style*="rgb(42, 42, 42)"] .bump-card-link {
+  color: #00d99f;
+}
+
+.bump-card[style*="rgb(42, 42, 42)"]:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  background-color: #333333;
+  border-color: #505050;
+}
+
+/* Card styling for very dark backgrounds (#1f1f1f) */
+.bump-card[style*="rgb(31, 31, 31)"] {
+  background-color: #1f1f1f;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.bump-card[style*="rgb(31, 31, 31)"] h3,
+.bump-card[style*="rgb(31, 31, 31)"] p {
+  color: #ffffff;
+}
+
+.bump-card[style*="rgb(31, 31, 31)"] .bump-card-link {
+  color: #00d99f;
+}
+
+.bump-card[style*="rgb(31, 31, 31)"]:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  background-color: #2a2a2a;
+  border-color: #3a3a3a;
+}
+
+/* Card styling for lime/green backgrounds */
+.bump-card[style*="rgb(179, 255, 0)"] {
+  background-color: #b3ff00;
+  border: none;
+  box-shadow: 0 4px 20px rgba(179, 255, 0, 0.2);
+}
+
+.bump-card[style*="rgb(179, 255, 0)"] h3 {
+  color: #1a1a1a;
+}
+
+.bump-card[style*="rgb(179, 255, 0)"] p {
+  color: #333333;
+}
+
+.bump-card[style*="rgb(179, 255, 0)"] .bump-card-link {
+  color: #1a1a1a;
+}
+
+.bump-card[style*="rgb(179, 255, 0)"]:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(179, 255, 0, 0.3);
+  background-color: #ccff33;
+}
+
+/* ===========================
+   CARD CONTENT ELEMENTS
+   =========================== */
+
+.bump-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.bump-card:hover .bump-card-icon {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bump-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+  line-height: 1.3;
+}
+
+.bump-card p {
+  font-size: 0.95rem;
+  color: #b3b3b3;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.bump-card-link {
+  display: inline-flex;
+  align-items: center;
+  color: #00d99f;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.bump-card-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00d99f;
+  transition: width 0.3s ease;
+}
+
+.bump-card:hover .bump-card-link::after {
+  width: 100%;
+}
+
+.bump-card[style*="rgb(179, 255, 0)"] .bump-card-link::after {
+  background-color: #1a1a1a;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 1024px) {
+  .bumpups-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .bump-card {
+    padding: 2rem;
+  }
+
+  .bumpups-header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bumpups {
+    padding: 3rem 1.5rem;
+  }
+
+  .bumpups-container {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .bumpups-header {
+    margin-bottom: 2rem;
+  }
+
+  .bumpups-header h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .bumpups-header p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .bump-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .bump-card-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .bump-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .bump-card p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .bump-card-link {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .bumpups {
+    padding: 2rem 1rem;
+  }
+
+  .bumpups-container {
+    gap: 1rem;
+  }
+
+  .bumpups-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .bumpups-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .bumpups-header p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .bump-card {
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+  }
+
+  .bump-card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .bump-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .bump-card p {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.35;
+  }
+
+  .bump-card-link {
+    font-size: 0.8rem;
+  }
+}

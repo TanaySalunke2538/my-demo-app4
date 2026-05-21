@@ -5,9 +5,18 @@ const Timestamps = () => {
   const [videoUrl, setVideoUrl] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  const isValidYouTubeUrl = (url) => {
+    const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/i;
+    return youtubeRegex.test(url);
+  };
+
   const handleGenerate = () => {
     if (!videoUrl.trim()) {
       alert('Please enter a YouTube video URL');
+      return;
+    }
+    if (!isValidYouTubeUrl(videoUrl)) {
+      alert('Please enter a valid YouTube URL');
       return;
     }
     setIsLoading(true);

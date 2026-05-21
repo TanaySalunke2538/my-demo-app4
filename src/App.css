@@ -372,14 +372,14 @@ button {
 }
 
 /* ===========================
-   APP SECTIONS
+   APP SECTIONS - NO BACKGROUND
    =========================== */
 .app-section {
   width: 100%;
-  padding: 3rem 2rem;
-  background-color: #e8e8e8;
+  padding: 0;
+  background-color: transparent;
   margin-bottom: 0;
-  min-height: 120px;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -395,4 +395,4 @@ button {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-} 
+}

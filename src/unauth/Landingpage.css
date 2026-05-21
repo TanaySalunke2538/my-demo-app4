@@ -1,1 +1,53 @@
-/* Landing page styles are now minimal and simple */
+/* ===========================
+   LANDINGPAGE CONTAINER
+   =========================== */
+
+.landingpage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.landingpage-header {
+  width: 100%;
+  background-color: transparent;
+}
+
+.landingpage-main {
+  flex: 1;
+  width: 100%;
+  background-color: transparent;
+}
+
+.landingpage-footer {
+  width: 100%;
+  background-color: #1a1a1a;
+}
+
+/* ===========================
+   NO BACKGROUND OR PADDING
+   =========================== */
+
+.landingpage-section {
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+  margin: 0;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .landingpage-section {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .landingpage-section {
+    padding: 0;
+    margin: 0;
+  }
+}

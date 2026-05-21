@@ -37,7 +37,7 @@ const Navbar = () => {
           <li><a href="#services" onClick={closeMenu}>Services</a></li>
           <li><a href="#blog" onClick={closeMenu}>Blog</a></li>
           {/* Button inside menu for mobile */}
-          <li style={{ borderTop: '1px solid #e0e0e0', paddingTop: '1rem', marginTop: '1rem' }}>
+          <li style={{ borderTop: '1px solid #404040', paddingTop: '1rem', marginTop: '1rem' }}>
             <button className="navbar-button-mobile" onClick={closeMenu}>
               Do more with video
             </button>

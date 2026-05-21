@@ -4,40 +4,41 @@ import './Bumpups.css';
 const Bumpups = () => {
   const services = [
     { 
-      id: 1, 
-      title: 'Search engine optimization', 
+      id: 1,
+      title: 'Local Video', 
       description: 'Improve your online visibility and drive organic traffic to your website.',
-      icon: '🔍',
-      bgColor: '#f0f0f0'
+      icon: '🎥',
+      bgColor: '#00000095'
     },
     { 
       id: 2, 
-      title: 'Pay-per-click advertising', 
+      title: 'Video Chat', 
       description: 'Targeted ads that drive qualified leads and maximize your ROI.',
-      icon: '🖱️',
-      bgColor: '#b3ff00'
+      icon: '💬',
+      bgColor: '#1c1a1a'
+
     },
     { 
       id: 3, 
-      title: 'Social Media Marketing', 
+      title: 'AI Youtube', 
       description: 'Build your brand presence and engage with your audience on social platforms.',
-      icon: '📱',
-      bgColor: '#1a1a1a'
+      icon: '🤖',
+      bgColor: '#1f1f1f'
     },
     { 
       id: 4, 
-      title: 'Email Marketing', 
+      title: 'API Integration', 
       description: 'Reach your customers directly with personalized email campaigns.',
-      icon: '✉️',
-      bgColor: '#f0f0f0'
+      icon: '⚙️',
+      bgColor: '#00000095'
     },
   ];
 
   return (
     <section className="bumpups">
       <div className="bumpups-header">
-        <h2>Bumpups</h2>
-        <p>At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include: <a href="https://bumpups.com" target="_blank" rel="noopener noreferrer" style={{ color: '#667eea', textDecoration: 'none', fontWeight: '600' }}>bumpups.com</a></p>
+        <h2>Do more with Bumpups</h2>
+        <p>Process your videos to deliver insights across all industries. Ask Queries, request summaries, and get started with analysis and more with <a href="https://bumpups.com" target="_blank" rel="noopener noreferrer" style={{ color: '#667eea', textDecoration: 'none', fontWeight: '600' }}>bumpups.com</a></p>
       </div>
       
       <div className="bumpups-container">

@@ -14,14 +14,14 @@ function App() {
 
       {/* ==================== MAIN CONTENT ==================== */}
       <main className="app-main">
-        {/* Bumpups Component Section */}
-        <section className="app-section">
-          <Bumpups />
-        </section>
-
         {/* Timestamps Component Section */}
         <section className="app-section">
           <Timestamps />
+        </section>
+
+        {/* Bumpups Component Section */}
+        <section className="app-section">
+          <Bumpups />
         </section>
       </main>
 
